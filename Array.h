@@ -1,5 +1,4 @@
 #include <cstddef>
-//#include <algorithm>
 
 template<class T>
 void swap(T & a, T & b)
