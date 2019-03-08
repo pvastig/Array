@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Array.h"
-
+#include "PlacementArray.h"
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     Array<int> a(5, 30);
+    cout << a.size() << endl;
     for (int i = 0; i < a.size(); ++i) {
         cout << a[i] << '\n';
     }
@@ -16,11 +16,12 @@ int main(int argc, char *argv[])
         cout << b[i] << '\n';
     }
 
+    cout << "assigment" << endl;
     Array<int> c(5, 10);
-    a = b=c;
+    a = b;
     for (int i = 0; i < b.size(); ++i) {
+        cout << i+1 << "------------------\n";
         cout << a[i] << '\n';
-        cout << "------------------\n";
         cout << b[i] << '\n';
     }
     return 0;
